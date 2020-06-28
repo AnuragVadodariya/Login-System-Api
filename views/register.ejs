@@ -1,0 +1,45 @@
+<form action="" method="POST">
+<div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <h4 class="card-title mt-3 text-center">Create Account</h4>
+        <% if(typeof ar != 'undefined'){ %> <% ar.forEach(function(val) { %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <%= val.er %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <% });  }%>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+             </div>
+            <input name="unm" class="form-control" placeholder="Full name" type="text" value="<%= typeof unm != 'undefined' ? unm : '' %>" required>
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+             </div>
+            <input name="email" class="form-control" placeholder="Email address" type="email" value="<%= typeof email != 'undefined' ? email : '' %>" required>
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+            </div>
+            <input name="pass"class="form-control" placeholder="Create password" type="password" value="<%= typeof pass != 'undefined' ? pass : '' %>" required>
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+            </div>
+            <input name="pass2" class="form-control" placeholder="Repeat password" type="password" value="<%= typeof pass2 != 'undefined' ? pass2 : '' %>" required>
+        </div> <!-- form-group// -->                                      
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+        </div> <!-- form-group// -->      
+        <p class="text-center">Have an account? <a href="./login">Log In</a> </p>                                                                 
+    </article>
+    </div> <!-- card.// -->
+
+</form>
+    
